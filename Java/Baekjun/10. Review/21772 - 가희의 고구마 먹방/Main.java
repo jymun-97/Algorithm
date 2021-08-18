@@ -32,7 +32,6 @@ public class Main {
 
     static void solve() {
         dfs(sr, sc, 0);
-
         System.out.println(ans);
     }
 
