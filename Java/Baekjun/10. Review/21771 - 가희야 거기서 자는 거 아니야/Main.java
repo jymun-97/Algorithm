@@ -7,6 +7,7 @@ public class Main {
     static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
+
         int row = Integer.parseInt(st.nextToken());
         int col = Integer.parseInt(st.nextToken());
 
