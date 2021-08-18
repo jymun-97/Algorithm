@@ -12,7 +12,6 @@ class Process implements Comparable<Process> {
         remain--;
         priority--;
     }
-
     public int compareTo(Process p) {
         if (priority != p.priority) return p.priority - priority;
         else return id - p.id;
