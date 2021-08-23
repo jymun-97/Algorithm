@@ -48,7 +48,6 @@ public class Main {
             }
         }
         System.out.println(count);
-        // print();
     }
 
     static void print() {
