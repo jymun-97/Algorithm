@@ -19,7 +19,6 @@ public class Main {
 
         x = Integer.parseInt(br.readLine());
     }
-
     static void solve() {
         for (int num : nums) {
             check(num);
