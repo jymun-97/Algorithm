@@ -40,6 +40,7 @@ public class Main {
             System.out.println("SAD");
             return;
         }
+
         StringBuilder sb = new StringBuilder();
         sb.append(ans).append('\n').append(cnt);
         System.out.println(sb);
