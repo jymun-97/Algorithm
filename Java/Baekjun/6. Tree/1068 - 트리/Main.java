@@ -23,9 +23,7 @@ public class Main {
             int parent = Integer.parseInt(st.nextToken());
 
             if (parent == -1) root = child;
-            else {
-                graph[parent].add(child);
-            }
+            else graph[parent].add(child);
         }
 
         target = Integer.parseInt(br.readLine());
