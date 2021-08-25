@@ -19,6 +19,7 @@ public class Main {
         int pre = root = Integer.parseInt(st.nextToken());
         indexOf[root] = 1;
         int idx = 2;
+
         while (st.hasMoreTokens()) {
             int node = Integer.parseInt(st.nextToken());
             indexOf[node] = idx++; 
