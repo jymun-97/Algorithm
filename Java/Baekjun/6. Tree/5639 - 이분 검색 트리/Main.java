@@ -16,7 +16,6 @@ public class Main {
         while (true) {
             line = br.readLine();
             if (line == null || line.equals("")) break;
-            
             que.add(Integer.parseInt(line));
         }
     }
