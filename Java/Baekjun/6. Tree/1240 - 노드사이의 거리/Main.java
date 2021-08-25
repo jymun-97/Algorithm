@@ -11,7 +11,6 @@ public class Main {
     static int[] arrFrom, arrTo;
     static int[] dist;
 
-
     static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
