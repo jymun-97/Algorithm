@@ -17,7 +17,6 @@ public class Main {
         period = toPeriod(st.nextToken());
         penalty = Integer.parseInt(st.nextToken());
 
-
         while (n --> 0) {
             st = new StringTokenizer(br.readLine());
             String date = st.nextToken() + " " + st.nextToken();
