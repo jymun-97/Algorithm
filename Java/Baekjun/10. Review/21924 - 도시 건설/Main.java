@@ -59,6 +59,7 @@ public class Main {
         for (Edge e : selected) {
             sum += e.weight;
         }
+
         System.out.println(total - sum);
     }
 
