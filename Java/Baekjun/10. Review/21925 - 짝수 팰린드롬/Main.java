@@ -50,6 +50,7 @@ public class Main {
             start = end + 1;
             end = start + 1;
         }
+
         System.out.println(count);
     }
 
