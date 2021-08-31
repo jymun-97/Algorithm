@@ -25,7 +25,6 @@ public class Main {
             graph[from].add(to);
         }
         x = Integer.parseInt(br.readLine());
-
     }
 
     static void solve() {
