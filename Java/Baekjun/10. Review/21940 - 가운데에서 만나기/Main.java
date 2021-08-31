@@ -50,8 +50,8 @@ public class Main {
         k = Integer.parseInt(br.readLine());
         a = new int[k + 1];
         st = new StringTokenizer(br.readLine());
-        for (int i = 1; i <= k; i++) a[i] = Integer.parseInt(st.nextToken());
 
+        for (int i = 1; i <= k; i++) a[i] = Integer.parseInt(st.nextToken());
     }
 
     static void solve() {
