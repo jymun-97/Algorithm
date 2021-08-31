@@ -21,7 +21,6 @@ class Q implements Comparable<Q> {
 }
 
 public class Main {
-
     static int n, m;
     static TreeSet<Q> list = new TreeSet<>();
     static boolean flag = true;
