@@ -10,7 +10,6 @@ public class Main {
     static boolean[] visit;
     static int[] parentOf;
 
-
     static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(br.readLine());
