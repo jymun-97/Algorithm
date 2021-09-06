@@ -10,7 +10,6 @@ public class Main {
     static boolean[] visit;
     static StringBuilder sb = new StringBuilder();
 
-
     static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
