@@ -7,6 +7,7 @@ class Q implements Comparable<Q> {
         num = n; 
         level = l;
     }
+
     public int compareTo(Q q) {
         if (level == q.level) return num - q.num;
         else return level - q.level;
