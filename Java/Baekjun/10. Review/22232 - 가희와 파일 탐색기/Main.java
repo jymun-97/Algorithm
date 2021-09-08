@@ -23,7 +23,6 @@ public class Main {
                 else return extension.compareTo(other.extension);
             }
         }
-    
         @Override
         public String toString() { return name + "." + extension; }
     }
