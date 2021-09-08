@@ -22,6 +22,7 @@ public class Main {
         group = new ArrayList[q + 1];
         for (int i = 0; i <= q; i++) group[i] = new ArrayList<>();
     }
+
     static void solve() {
         insert(0);
         System.out.println(ans);
