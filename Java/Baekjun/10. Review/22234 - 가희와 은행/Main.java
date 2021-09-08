@@ -30,7 +30,6 @@ public class Main {
             int remain = Integer.parseInt(st.nextToken());
             que.add(new Customer(id, remain, 0));
         }
-
         int i = Integer.parseInt(br.readLine());
         while (i --> 0) {
             st = new StringTokenizer(br.readLine());
