@@ -41,7 +41,6 @@ public class Main {
             dfs(graph[node][R]);
             count++;
         }
-
         if (node == end) {
             System.out.println(count);
             return;
