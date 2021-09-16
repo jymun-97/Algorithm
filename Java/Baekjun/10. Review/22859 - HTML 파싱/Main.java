@@ -33,6 +33,7 @@ public class Main {
         for (int i = 0; html.charAt(i) != '>'; i++) {
             div += html.charAt(i);
         }
+
         String[] tokens = div.split("\"");
         sb.append("title : ").append(tokens[1]);
 
