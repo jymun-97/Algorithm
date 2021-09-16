@@ -49,6 +49,7 @@ public class Main {
 
         dfs(0);
         q = Integer.parseInt(br.readLine());
+
         while (q --> 0) {
             String[] tokens = (br.readLine()).split("/");
             String target = tokens[tokens.length - 1];
