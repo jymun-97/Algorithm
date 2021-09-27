@@ -3,7 +3,6 @@ import java.io.*;
 
 class State {
     int[] arr;
-
     public State(int[] s) {
         arr = s.clone();  
     }
