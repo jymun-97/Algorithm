@@ -43,7 +43,6 @@ public class Main {
                 done[i] = buildTime[i];
             }
         }
-
         while (!que.isEmpty()) {
             int from = que.poll();
 
