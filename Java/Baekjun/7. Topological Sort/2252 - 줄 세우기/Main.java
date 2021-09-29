@@ -41,7 +41,6 @@ public class Main {
         for (int i = 1; i <= n; i++) {
             if (indeg[i] == 0) que.add(i);
         }
-
         while (!que.isEmpty()) {
             int from = que.poll();
             sb.append(from).append(' ');
