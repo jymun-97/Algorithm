@@ -36,6 +36,7 @@ public class Main {
             graph[from].add(to);
             indeg[to]++;
         }
+
         target = Integer.parseInt(br.readLine());
     }
 
