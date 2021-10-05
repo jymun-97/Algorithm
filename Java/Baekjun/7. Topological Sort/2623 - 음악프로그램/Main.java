@@ -58,7 +58,6 @@ public class Main {
                     System.out.println(0);
                     return;
                 }
-
                 if (--indeg[to] == 0) {
                     que.add(to);
                     visit[to] = true;
