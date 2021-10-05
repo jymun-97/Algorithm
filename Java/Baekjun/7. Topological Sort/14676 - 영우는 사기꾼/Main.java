@@ -51,6 +51,7 @@ public class Main {
                 nBuildings[building]--;
             }
         }
+
         sb.append("King-God-Emperor");
     }
     
