@@ -49,7 +49,6 @@ public class Main {
                 strahler[i] = 1;
             }
         }
-
         while (!que.isEmpty()) {
             int from = que.poll();
 
