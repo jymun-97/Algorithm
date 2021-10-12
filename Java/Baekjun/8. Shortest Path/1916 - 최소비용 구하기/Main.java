@@ -16,6 +16,7 @@ class Info {
         this.dist = dist;
     }
 }
+
 public class Main {
     static int n, m, start, end;
     static int[] dist;
