@@ -16,6 +16,7 @@ class Edge {
         dist = d;
     }
 }
+
 public class Main {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
