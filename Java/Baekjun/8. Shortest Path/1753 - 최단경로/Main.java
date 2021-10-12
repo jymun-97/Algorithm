@@ -15,6 +15,7 @@ class Edge {
         weight = w;
     }
 }
+
 public class Main {
 
     static int n, m, s;
