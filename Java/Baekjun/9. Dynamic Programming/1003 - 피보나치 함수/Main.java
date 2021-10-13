@@ -26,6 +26,7 @@ public class Main {
             int n = Integer.parseInt(br.readLine());
             sb.append(dy[n][0]).append(' ').append(dy[n][1]).append('\n');
         }
+
         System.out.println(sb);
     }
 }
