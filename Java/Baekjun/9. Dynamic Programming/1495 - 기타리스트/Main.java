@@ -19,7 +19,6 @@ public class Main {
         st = new StringTokenizer(br.readLine());
         for (int i = 1; i <= n; i++) {
             a[i] = Integer.parseInt(st.nextToken());
-
         }
     }
 
