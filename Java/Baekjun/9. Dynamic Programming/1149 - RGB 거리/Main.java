@@ -21,7 +21,6 @@ public class Main {
             cost[i][B] = Integer.parseInt(st.nextToken());
         }
     }
-
     static void solve() {
         dp[1][R] = cost[1][R];
         dp[1][G] = cost[1][G];
