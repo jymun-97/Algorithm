@@ -17,6 +17,7 @@ public class Main {
         for (int i = 1; i <= n; i++) graph[i] = new HashMap<>();
 
         int k = Integer.parseInt(br.readLine());
+
         while (k --> 0) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int from = Integer.parseInt(st.nextToken());
