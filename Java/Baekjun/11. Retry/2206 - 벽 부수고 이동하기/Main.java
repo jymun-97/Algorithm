@@ -65,7 +65,6 @@ public class Main {
                 }
             }
         }
-
         int ans = Math.min(dist[0][n][m], dist[1][n][m]);
         System.out.println(ans == Integer.MAX_VALUE ? -1 : ans);
     }
