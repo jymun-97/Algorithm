@@ -8,6 +8,7 @@ class Info {
         dist = d;
     }
 }
+
 class Edge {
     int to, weight;
     public Edge(int t, int w) {
