@@ -39,6 +39,7 @@ public class Main {
                 return;
             }
         }
+
         sb.append("YES").append('\n');
     }
 
