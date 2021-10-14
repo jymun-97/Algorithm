@@ -17,6 +17,7 @@ class Point {
         return (row + " " + col).hashCode();
     }
 }
+
 public class Main {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringBuilder sb = new StringBuilder();
