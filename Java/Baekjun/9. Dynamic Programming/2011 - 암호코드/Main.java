@@ -17,7 +17,7 @@ public class Main {
         for (int i = 1; i <= n; i++) {
             if (str.charAt(i) != '0') dp[i] = dp[i - 1];
             if (isValuable(str.charAt(i - 1), str.charAt(i))) {
-                
+                // todo.
             }
         }
     }
