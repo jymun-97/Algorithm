@@ -38,6 +38,7 @@ public class Main {
 
         int maxScore = Integer.max(max[1][0], Integer.max(max[1][1], max[1][2]));
         int minScore = Integer.min(min[1][0], Integer.min(min[1][1], min[1][2]));
+
         System.out.println(maxScore + " " + minScore);
     }
 
