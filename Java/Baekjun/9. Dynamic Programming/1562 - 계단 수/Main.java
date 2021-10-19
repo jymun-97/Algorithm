@@ -37,6 +37,7 @@ public class Main {
         for (int i = 0; i < 10; i++) {
             ans = (ans + dp[n][i][1023]) % MOD;
         }
+
         System.out.println(ans);
     }
 
