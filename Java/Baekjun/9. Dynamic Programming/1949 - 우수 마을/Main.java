@@ -46,6 +46,7 @@ public class Main {
             dp[from][0] = 0;
             dp[from][1] = a[from];
         }
+
         boolean flag = false;
         for (int to : graph[from]) {
             graph[to].remove(graph[to].indexOf(from));
