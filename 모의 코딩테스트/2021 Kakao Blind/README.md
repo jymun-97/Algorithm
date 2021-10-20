@@ -1,3 +1,3 @@
 ## 2021 Kakao Blind
 ### - solved 6 / 7
-### - todo. retry q7
+### - TODO. retry q7
