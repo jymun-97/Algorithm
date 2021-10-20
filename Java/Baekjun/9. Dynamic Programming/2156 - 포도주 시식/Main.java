@@ -19,7 +19,6 @@ public class Main {
     static void solve() {
         // dp[i][0] : i번째 와인 O, i-1번째 와인 O
         // dp[i][1] : i번째 와인 O, i-1번째 와인 X
-        // 일때 최대값
 
         dp[1][0] = dp[1][1] = cost[1];
 
