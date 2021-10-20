@@ -29,6 +29,7 @@ public class Main {
             dp[i][0] = Integer.max(dp[i - 2][0], dp[i - 2][1]) + score[i];
             dp[i][1] = dp[i - 1][0] + score[i];
         }
+
         System.out.println(Integer.max(dp[n][0], dp[n][1]));
 
         int i = n;
