@@ -29,7 +29,6 @@ public class Main {
 
             graph[from].add(to);
         }
-
         for (int i = 0; i < k; i++) {
             st = new StringTokenizer(br.readLine());
             records[i][0] = Integer.parseInt(st.nextToken());
