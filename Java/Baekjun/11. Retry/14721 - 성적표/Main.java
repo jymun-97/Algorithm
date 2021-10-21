@@ -46,6 +46,7 @@ public class Main {
             int y = arry[i];
             result += (y*y - 2*a*x*y - 2*b*y + a*a*x*x + 2*a*b*x + b*b);
         }
+
         return result < 0 ? Long.MAX_VALUE : result;
     }
 
