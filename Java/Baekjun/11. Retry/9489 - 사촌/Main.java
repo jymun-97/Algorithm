@@ -60,7 +60,6 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
-
         while (true) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             n = Integer.parseInt(st.nextToken());
