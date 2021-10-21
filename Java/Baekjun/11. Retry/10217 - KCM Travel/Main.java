@@ -75,7 +75,6 @@ public class Main {
                 }    
             }
         }
-
         sb.append("Poor KCM").append('\n');
     }
 
