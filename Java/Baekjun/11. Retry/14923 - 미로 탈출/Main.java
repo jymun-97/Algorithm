@@ -61,8 +61,7 @@ public class Main {
                     que.add(nc);
                     que.add(1);
                     dist[nr][nc][1] = dist[row][col][0] + 1;
-                }
-                else {
+                } else {
                     if (dist[nr][nc][used] != Integer.MAX_VALUE) continue;
                     
                     que.add(nr);
