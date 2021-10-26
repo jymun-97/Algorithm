@@ -25,7 +25,6 @@ public class Main {
     static void solve() {
         Arrays.sort(nums);
         rec_func(0, "");
-
         System.out.println(answer.toString());
     }
 
