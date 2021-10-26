@@ -46,11 +46,6 @@ public class Main {
             }
         }
 
-        // 1 : right
-        // 2 : left
-        // 3 : up
-        // 4 : down
-
         while (!que.isEmpty()) {
             int row = que.poll();
             int col = que.poll();
