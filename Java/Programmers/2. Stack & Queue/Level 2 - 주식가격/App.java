@@ -12,7 +12,6 @@ class Solution {
                 if (target > prices[j]) break;
             }
         }
-        
         return answer;
     }
 }
