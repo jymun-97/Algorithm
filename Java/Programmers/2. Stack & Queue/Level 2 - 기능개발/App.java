@@ -44,6 +44,7 @@ public class App {
         }
         answer.add(right - left);
         int[] result = answer.stream().mapToInt(i -> i).toArray();
+
         System.out.println(Arrays.toString(result));
     }
 }
