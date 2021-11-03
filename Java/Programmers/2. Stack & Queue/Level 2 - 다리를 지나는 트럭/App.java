@@ -17,7 +17,6 @@ class Solution {
                 int out = runQueue.poll();
                 sum -= out;
             }
-
             if (runQueue.size() < bridge_length && sum + readyQueue.peek() <= weight) {
                 int in = readyQueue.poll();
                 runQueue.add(in);
