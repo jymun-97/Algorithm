@@ -30,6 +30,7 @@ public class Main {
             dp[i].add(p[i]);
             Collections.sort(dp[i], Collections.reverseOrder());
         }
+
         System.out.println(dp[n].get(0));
     }
 
