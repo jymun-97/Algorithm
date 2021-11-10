@@ -8,8 +8,6 @@ public class Main {
     static int n, max = 100001;
     static int[][] cost;
     static int[][] dp;
-    // dp[i][0] : i번째 열의 0행 스티커를 땜
-    // dp[i][1] : i번째 열의 1행 스티커를 땜
 
     static void input() throws IOException {
 
