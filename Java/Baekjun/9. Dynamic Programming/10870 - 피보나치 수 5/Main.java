@@ -17,6 +17,7 @@ public class Main {
         for (int i = 2; i < 21; i++) {
             dy[i] = dy[i - 2] + dy[i - 1];
         }
+
         System.out.println(dy[n]);
     }
 
