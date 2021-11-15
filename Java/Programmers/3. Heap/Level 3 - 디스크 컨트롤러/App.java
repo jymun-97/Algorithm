@@ -2,7 +2,6 @@ import java.util.*;
 
 class Solution {
     class Task {
-
         int at, rt;
         public Task(int at, int rt) {
             this.at = at;
