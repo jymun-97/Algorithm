@@ -1,6 +1,7 @@
 import java.util.*;
 
 class Solution {
+
     public int[] solution(String[] operations) {
         int[] answer = {0, 0};
         TreeSet<Integer> set = new TreeSet<>();
