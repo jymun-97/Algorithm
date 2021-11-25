@@ -10,7 +10,6 @@ class Solution {
                 set.add(str.substring(0, i));
             }
         }
-
         for (String str : phone_book) {
             if (set.contains(str)) {
                 answer = true;
