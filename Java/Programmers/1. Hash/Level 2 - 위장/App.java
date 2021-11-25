@@ -15,11 +15,3 @@ class Solution {
         return answer - 1;
     }
 }
-
-public class App {
-    public static void main(String[] args) throws Exception {
-        
-    }
-}
-
-// 13m
