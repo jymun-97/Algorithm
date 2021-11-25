@@ -72,8 +72,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Solution s = new Solution();
         int[] result = s.solution(new String[] {"classic", "pop", "classic", "classic", "pop"}, new int[] {500, 600, 150, 800, 2500});
+
         System.out.println(Arrays.toString(result));
     }
 }
-
-// 1h 10m
