@@ -7,6 +7,7 @@ class Solution {
         for (int h = 1; h <= Math.sqrt(yellow); h++) {
             if (yellow % h != 0) continue;
             int w = yellow / h;
+
             if ((h + w + 2) * 2 == brown) {
                 answer[0] = w + 2;
                 answer[1] = h + 2;
