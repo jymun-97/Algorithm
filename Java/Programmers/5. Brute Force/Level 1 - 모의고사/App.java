@@ -17,7 +17,6 @@ class Solution {
         }
 
         int max = Math.max(count[0], Math.max(count[1], count[2]));
-
         for (int i = 0; i < 3; i++) 
             if (max == count[i]) list.add(i + 1);
 
