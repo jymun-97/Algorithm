@@ -15,6 +15,7 @@ class Solution {
         for (String num : list) answer += num;
 
         if (answer.charAt(0) == '0') return "0";
+
         return answer;
     }
 }
