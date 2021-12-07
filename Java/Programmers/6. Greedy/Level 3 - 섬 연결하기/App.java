@@ -23,6 +23,7 @@ class Solution {
         if (parentOf[node] == node) return node;
         return find(parentOf[node]);
     }
+
     void union(int a, int b) {
         a = find(a);
         b = find(b);
