@@ -21,7 +21,6 @@ class Solution {
 
             if (left == right) answer++;
         }
-
         return answer;
     }
 }
