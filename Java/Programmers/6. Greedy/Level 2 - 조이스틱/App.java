@@ -17,7 +17,6 @@ class Solution {
             
             min=Math.min(min,i+length-next+Math.min(i,length-next));
         }
-
         return answer+min;
     }
 }
