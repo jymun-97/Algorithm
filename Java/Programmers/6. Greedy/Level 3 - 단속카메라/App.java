@@ -12,6 +12,7 @@ class Solution {
             end = e;
         }
     }
+
     public int solution(int[][] routes) {
         Arrays.sort(routes, (a1, a2) -> { return a1[0] - a2[0]; });
         ArrayList<Group> groups = new ArrayList<>();
