@@ -17,7 +17,6 @@ class Solution {
                 right = left + 1;
             }
         }
-
         return answer.toString().replaceAll(" ", "");
     }
 }
