@@ -1,3 +1,3 @@
-## 2019 Kakao Blind
-### - solved 5 / 7
-### ~~- TODO. retry q4, q7~~
+## 2018 Kakao Blind #1
+### - solved 5 / 6
+### ~~- TODO. retry q1~~
