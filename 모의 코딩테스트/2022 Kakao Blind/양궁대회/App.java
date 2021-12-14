@@ -35,6 +35,7 @@ class Solution {
             }
             return;
         }
+
         if (count + info[10 - score] + 1 <= n) {
             myScore += score;
             cand[10 - score] = info[10 - score] + 1;
