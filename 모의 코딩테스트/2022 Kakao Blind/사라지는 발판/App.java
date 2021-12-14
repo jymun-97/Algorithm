@@ -63,9 +63,3 @@ class Solution {
         return row >= 0 && row < n && col >= 0 && col < m;
     }
 }
-
-public class App {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-    }
-}
