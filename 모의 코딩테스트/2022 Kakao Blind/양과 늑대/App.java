@@ -9,6 +9,7 @@ class Solution {
     public int solution(int[] info, int[][] edges) {
         n = info.length;
         this.info = info;
+
         graph = new ArrayList[n];
         for (int i = 0; i < n; i++) graph[i] = new ArrayList<>();
         
