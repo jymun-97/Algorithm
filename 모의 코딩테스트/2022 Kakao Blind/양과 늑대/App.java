@@ -27,6 +27,7 @@ class Solution {
     void dfs(int from, int nSheep, int nWolf, ArrayList<Integer> list) {
         nSheep += 1 - info[from];
         nWolf += info[from];
+
         if (nSheep <= nWolf) return;
 
         answer = Math.max(answer, nSheep);
