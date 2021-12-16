@@ -14,9 +14,8 @@ class Solution {
         nWeak = weak.length;
         for (int i = 0; i < nWeak; i++) {
             ArrayList<Integer> route = new ArrayList<>();
-            for (int j = 0; j < nWeak; j++) {
-                route.add(weak[(i + j) % nWeak]);
-            }
+            for (int j = 0; j < nWeak; j++) route.add(weak[(i + j) % nWeak]);
+
             routes.add(route);
         }
         
