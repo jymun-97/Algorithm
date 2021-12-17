@@ -7,6 +7,7 @@ class Point {
         this.col = col;
     }
 }
+
 class Shape {
     int index, nLayer;
     ArrayList<Point> points;
