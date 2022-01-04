@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Boj_10825 {
+
     static class Score implements Comparable<Score> {
         String name;
         int korean, english, math;
