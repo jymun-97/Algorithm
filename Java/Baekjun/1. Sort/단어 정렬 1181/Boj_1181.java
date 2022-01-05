@@ -14,9 +14,7 @@ class Word implements Comparable<Word> {
     }
 
     public int compareTo(Word other) {
-        if (length == other.length) {
-            return word.compareTo(other.word);
-        }
+        if (length == other.length) return word.compareTo(other.word);
         return length - other.length;
     }
 }
