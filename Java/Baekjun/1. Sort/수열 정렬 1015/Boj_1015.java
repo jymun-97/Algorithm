@@ -7,7 +7,6 @@ import java.util.StringTokenizer;
 public class Boj_1015 {
     static class Elem implements Comparable<Elem> {
         int value, index;
-
         public Elem(int value, int index) {
             this.value = value;
             this.index = index;
