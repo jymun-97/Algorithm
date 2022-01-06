@@ -24,7 +24,6 @@
       <sourceFolder url="file://$MODULE_DIR$/Test" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/Boj_1253_좋다_BinarySearch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Programmers/Pro_12946_하노이의 탑" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Programmers/Pro_160585_혼자서 하는 틱택토" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Programmers/Pro_161988_연속 펄스 부분 수열의 합" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/2000 - 2999/Boj_2580_스도쿠" />
     </content>
