@@ -24,8 +24,8 @@ public class Boj_20291 {
 
     static void solve() {
         StringBuilder sb = new StringBuilder();
-        int count = 1;
         String preFile = files.get(0);
+        int count = 1;
 
         for (int i = 1; i < n; i++) {
             String file = files.get(i);
