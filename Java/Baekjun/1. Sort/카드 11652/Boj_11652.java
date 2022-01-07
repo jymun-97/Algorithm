@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 public class Boj_11652 {
+
     static int N;
     static long[] values;
     static StringBuilder sb = new StringBuilder();
