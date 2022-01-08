@@ -16,7 +16,6 @@ public class Boj_15970 {
 
         public int compareTo(Point other) {
             if (color != other.color) return color - other.color;
-
             return location - other.location;
         }
     }
