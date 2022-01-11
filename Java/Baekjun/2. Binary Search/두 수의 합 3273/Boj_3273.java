@@ -9,7 +9,6 @@ public class Boj_3273 {
     static HashMap<Integer, Integer> hashMap = new HashMap<>();
     static int[] nums;
 
-    
     static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
