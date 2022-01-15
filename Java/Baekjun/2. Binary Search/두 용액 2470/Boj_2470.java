@@ -12,6 +12,7 @@ public class Boj_2470 {
 
     static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         N = Integer.parseInt(br.readLine());
         array = new int[N];
 
