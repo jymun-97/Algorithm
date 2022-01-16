@@ -2,7 +2,6 @@ import java.util.*;
 import java.io.*;
 
 public class Boj_1764 {
-
     static int n, m, count;
     static String[] noSeen, noHeard;
     static StringBuilder sb = new StringBuilder();
