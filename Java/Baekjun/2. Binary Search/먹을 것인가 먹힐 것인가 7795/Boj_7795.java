@@ -23,7 +23,6 @@ public class Boj_7795 {
         for (int idx = 0; idx < N; idx++) {
             A[idx] = Integer.parseInt(st.nextToken());
         }
-
         st = new StringTokenizer(br.readLine(), " ");
         for (int idx = 0; idx < M; idx++) {
             B[idx] = Integer.parseInt(st.nextToken());
