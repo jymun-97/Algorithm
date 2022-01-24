@@ -3,6 +3,7 @@ import java.util.*;
 class Solution {
 
     TreeSet<Long> set = new TreeSet<>();
+
     public long[] solution(long k, long[] room_number) {
         int n = room_number.length;
         long[] answer = new long[n];
