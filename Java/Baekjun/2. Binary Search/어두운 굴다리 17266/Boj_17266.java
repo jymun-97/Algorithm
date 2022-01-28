@@ -5,7 +5,6 @@ public class Boj_17266 {
 
     static int n, m;
     static int[] x;
-
     static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(br.readLine());
