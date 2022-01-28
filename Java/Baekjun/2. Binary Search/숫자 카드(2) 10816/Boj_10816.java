@@ -2,7 +2,6 @@ import java.util.*;
 import java.io.*;
 
 public class Boj_10816 {
-
     static int n, m, base = 10000000;
     static int[] cards, targets;
     static int[] count = new int[base * 2 + 1];
