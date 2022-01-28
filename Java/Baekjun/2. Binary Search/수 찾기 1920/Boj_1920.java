@@ -20,6 +20,7 @@ public class Boj_1920 {
         
         M = Integer.parseInt(br.readLine());
         targets = new int[M];
+
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
             targets[i] = Integer.parseInt(st.nextToken());
