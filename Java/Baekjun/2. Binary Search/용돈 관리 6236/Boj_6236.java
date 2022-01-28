@@ -2,7 +2,6 @@ import java.util.*;
 import java.io.*;
 
 public class Boj_6236 {
-
     static int n, m;
     static int[] a;
     
