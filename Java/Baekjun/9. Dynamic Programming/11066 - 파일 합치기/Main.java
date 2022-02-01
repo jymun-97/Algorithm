@@ -21,7 +21,6 @@ public class Main {
             files[i] = Integer.parseInt(st.nextToken());
         }
     }
-
     static void solve() {
         prep();
 
