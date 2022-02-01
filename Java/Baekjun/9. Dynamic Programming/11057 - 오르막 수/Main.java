@@ -33,6 +33,7 @@ public class Main {
             }
             ans[x] %= 10007;
         }
+
         System.out.println(ans[n]);
     }
 
