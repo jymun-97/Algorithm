@@ -24,6 +24,7 @@ public class Main {
     static boolean isValuable(int size) {
         int count = 0;
         int sum = 0;
+
         for (int i = 0; i < N; i++) {
             if (sum + lectures[i] >= size) {
                 count++;
