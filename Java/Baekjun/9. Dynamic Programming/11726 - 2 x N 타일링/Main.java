@@ -18,6 +18,7 @@ public class Main {
         for (int i = 3; i <= n; i++) {
             dy[i] = (dy[i - 1] + dy[i - 2]) % 10007L; 
         }
+
         System.out.println(dy[n]);
     }
 
