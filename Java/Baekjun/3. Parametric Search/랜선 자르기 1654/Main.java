@@ -6,6 +6,7 @@ import java.util.StringTokenizer;
 public class Main {
     static int K, N;
     static int[] cables;
+
     static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
