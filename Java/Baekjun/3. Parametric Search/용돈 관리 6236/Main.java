@@ -8,7 +8,6 @@ public class Main {
     static long remain;
     static int[] limits;
 
-
     static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
