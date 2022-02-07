@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
+
     static int n;
     static int[] nums;
 
