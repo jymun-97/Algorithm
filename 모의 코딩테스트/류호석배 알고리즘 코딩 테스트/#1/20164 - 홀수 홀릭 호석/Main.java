@@ -25,6 +25,7 @@ public class Main {
         
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
+
         for (int s1 = 1; s1 <= length(num) - 2; s1++) {
             for (int s2 = 1; s2 <= length(num) - 1 - s1; s2++) {
                 int s3 = length(num) - s1 - s2;
