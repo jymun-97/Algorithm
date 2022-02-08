@@ -28,6 +28,7 @@ class Solution {
                 else dp[row][col] = (dp[row][col] + dfs(nr, nc)) % MOD;
             }
         }
+
         return dp[row][col];
     }
 }
