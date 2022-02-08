@@ -1,4 +1,5 @@
 class Solution {
+
     public int solution(int[] money) {
 
         int n = money.length;
