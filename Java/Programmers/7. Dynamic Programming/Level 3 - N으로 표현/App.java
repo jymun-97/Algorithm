@@ -28,6 +28,7 @@ class Solution {
         for (int i = 1; i <= 8; i++) {
             if (set[i].contains(number)) return i;
         }
+
         return -1;
     }
 }
