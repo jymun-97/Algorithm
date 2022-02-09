@@ -34,6 +34,7 @@ public class Main {
 
             if (sum == m) count++;
         }
+
         System.out.println(count);
     }
 
