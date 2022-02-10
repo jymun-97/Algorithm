@@ -14,7 +14,6 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 0; i < n; i++) a[i] = Integer.parseInt(st.nextToken());
     }
-
     static void solve() {
         Arrays.sort(a);
         StringBuilder sb = new StringBuilder();
