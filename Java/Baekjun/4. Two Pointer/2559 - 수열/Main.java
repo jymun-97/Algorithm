@@ -24,6 +24,7 @@ public class Main {
 
         int left, right = k;
         int sum = max;
+
         for (left = 1; right < n; left++) {
             sum -= nums[left - 1];
             sum += nums[right++];
