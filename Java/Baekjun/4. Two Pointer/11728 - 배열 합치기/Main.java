@@ -19,6 +19,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             nums.add(Integer.parseInt(st.nextToken()));
         }
+
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < m; i++) {
             nums.add(Integer.parseInt(st.nextToken()));
