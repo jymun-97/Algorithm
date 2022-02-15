@@ -17,6 +17,7 @@ class Solution {
             graph[i] = new HashSet<>();
             words[i] = (i == 0) ? begin : w[i - 1];
         }
+
         for (int i = 0; i <= n; i++) {
             String from = words[i];
             if (from.equals(target)) this.target = i;
