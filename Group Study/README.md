@@ -1,5 +1,3 @@
-## Algorithm Group Study  
-#
 ### # 구성원
 #### - 문준영 : Main - Kotlin, Sub - Java
 #### - ~~길상현 : Java~~
