@@ -1,5 +1,4 @@
 class Solution {
-
     int[] numbers;
     int target, n, answer = 0;
     
