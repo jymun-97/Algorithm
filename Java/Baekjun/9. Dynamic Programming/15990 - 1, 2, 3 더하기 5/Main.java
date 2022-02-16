@@ -26,7 +26,6 @@ public class Main {
     }
     static void input() throws IOException {
         n = Integer.parseInt(br.readLine());
-
     }
 
     static void solve() {
