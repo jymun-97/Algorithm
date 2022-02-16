@@ -30,6 +30,7 @@ public class Main {
         StringBuilder sb = new StringBuilder();
 
         pre();
+
         int t = Integer.parseInt(br.readLine());
         while (t --> 0) {
             int n = Integer.parseInt(br.readLine());
