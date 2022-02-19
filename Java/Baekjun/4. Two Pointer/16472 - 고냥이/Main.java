@@ -29,6 +29,7 @@ public class Main {
             max = Integer.max(max, right - left + 1);
             right++;
         }
+
         System.out.println(max);
     }
 
