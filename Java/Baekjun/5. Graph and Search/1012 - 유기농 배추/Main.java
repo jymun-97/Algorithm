@@ -6,9 +6,7 @@ import java.util.StringTokenizer;
 public class Main {
 
     static int T, M, N, K, count;
-    static int[][] dir = {
-        {1, 0}, {-1, 0}, {0, 1}, {0, -1}
-    };
+    static int[][] dir = { {1, 0}, {-1, 0}, {0, 1}, {0, -1} };
     static int[][] map;
     static boolean[][] visit;
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
