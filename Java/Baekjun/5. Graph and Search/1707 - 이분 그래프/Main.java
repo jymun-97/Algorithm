@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Main {
-
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static int v, e;
     static ArrayList<Integer>[] graph;
