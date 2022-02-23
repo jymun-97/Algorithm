@@ -11,6 +11,7 @@ public class Main {
     static int[][] map;
     static boolean[][] visit;
     static int[][] distance;
+
     static class Point {
         int row, col;
         public Point(int row, int col) {
