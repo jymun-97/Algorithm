@@ -10,7 +10,6 @@ public class Main {
     static int n, m, ans;
     static ArrayList<Integer>[] graph;
 
-
     static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
