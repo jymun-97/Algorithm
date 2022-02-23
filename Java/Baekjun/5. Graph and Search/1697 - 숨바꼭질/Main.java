@@ -6,7 +6,6 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
-
     static int N, K;
     static boolean[] visit = new boolean[100001];
     static int[] dir = {1, -1};
