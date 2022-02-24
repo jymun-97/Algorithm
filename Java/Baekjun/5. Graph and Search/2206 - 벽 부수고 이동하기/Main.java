@@ -37,7 +37,6 @@ public class Main {
             System.out.println(-1);
             return;
         }
-        
         bfs();
         for (int i = 1; i <= R; i++) {
             for (int j = 1; j <= C; j++) {
