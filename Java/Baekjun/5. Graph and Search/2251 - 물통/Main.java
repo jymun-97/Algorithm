@@ -24,9 +24,7 @@ public class Main {
             init();
         }
 
-        public void init() {
-            na = a; nb = b; nc = c;
-        }
+        public void init() { na = a; nb = b; nc = c; }
         public boolean isVisit() {
             return visit[a][b][c];
         }
