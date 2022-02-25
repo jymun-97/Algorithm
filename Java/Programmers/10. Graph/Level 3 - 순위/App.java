@@ -26,6 +26,7 @@ class Solution {
             }
             if (count == n - 1) answer++;
         }
+
         return answer;
     }
 }
