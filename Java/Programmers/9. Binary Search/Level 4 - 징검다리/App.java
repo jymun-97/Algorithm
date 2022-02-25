@@ -1,7 +1,6 @@
 import java.util.*;
 
 class Solution {
-
     public int solution(int distance, int[] arr, int n) {
         int answer = 0;
         ArrayList<Integer> rocks = new ArrayList<>();
