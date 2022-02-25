@@ -28,6 +28,7 @@ class Edge {
         return p1.equals(other.p1) && p2.equals(other.p2); 
     }
 }
+
 class Solution {
     public int solution(int[] arrows) {
         int answer = 0;
