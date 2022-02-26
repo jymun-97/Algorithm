@@ -20,7 +20,6 @@ public class Main {
             graph[i] = new ArrayList<>();
         }
 
-
         for (int i = 0; i < m; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int from = Integer.parseInt(st.nextToken());
