@@ -39,6 +39,7 @@ public class Main {
         StringBuilder sb = new StringBuilder();
         sb.append(counts.size()).append('\n');
         Collections.sort(counts);
+
         for (int num : counts) {
             sb.append(num).append('\n');
         }
