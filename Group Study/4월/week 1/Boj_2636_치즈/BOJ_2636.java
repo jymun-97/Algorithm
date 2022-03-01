@@ -2,7 +2,6 @@ import java.util.*;
 import java.io.*;
 
 public class BOJ_2636 {
-
     static int n, m, remain;
     static int[][] dir = {{1,0}, {0,1}, {-1, 0}, {0, -1}};
     static int[][] map;
