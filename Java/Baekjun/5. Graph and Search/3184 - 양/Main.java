@@ -29,6 +29,7 @@ public class Main {
 
         for (int i = 0; i < r; i++) {
             String line = br.readLine();
+
             for (int j = 0; j < c; j++) {
                 map[i][j] = line.charAt(j);
             }
