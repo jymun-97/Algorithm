@@ -54,7 +54,6 @@ public class Main {
 
     static void solve() {
         bfs();
-
         System.out.println(distance[destRow][destCol] == 0 ? "KAKTUS" : distance[destRow][destCol]);
     }
 
