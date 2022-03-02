@@ -15,7 +15,6 @@ public class Main {
     static StringTokenizer st;
     static StringBuilder sb = new StringBuilder();
 
-
     static void input() throws IOException {
         for (int i = 0; i < h; i++) {
             st = new StringTokenizer(br.readLine());
