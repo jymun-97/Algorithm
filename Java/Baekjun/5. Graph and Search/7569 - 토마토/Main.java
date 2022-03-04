@@ -19,6 +19,7 @@ public class Main {
         for (int i = 0; i < h; i++) {
             for (int j = 0; j < r; j++) {
                 st = new StringTokenizer(br.readLine());
+
                 for (int k = 0; k < c; k++) {
                     map[j][k][i] = Integer.parseInt(st.nextToken());
                     if (map[j][k][i] == 1) {
