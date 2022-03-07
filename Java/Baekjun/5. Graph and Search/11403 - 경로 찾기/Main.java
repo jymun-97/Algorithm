@@ -21,6 +21,7 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
+
             for (int j = 0; j < n; j++) {
                 graph[i][j] = Integer.parseInt(st.nextToken());
             }
