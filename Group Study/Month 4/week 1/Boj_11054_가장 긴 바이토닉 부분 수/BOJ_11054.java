@@ -35,7 +35,6 @@ public class BOJ_11054 {
                 }
                 idx--;
             }
-
             left[i] = (target < 0) ? 1 : left[target] + 1;
         }
 
