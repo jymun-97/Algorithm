@@ -32,7 +32,6 @@ public class Main {
         map = new int[R][C];
         newMap = new int[R][C];
 
-
         for (int i = 0; i < R; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < C; j++) {
