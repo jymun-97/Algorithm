@@ -33,6 +33,7 @@ public class BOJ_2636 {
     }
 
     static void solve() {
+
         int ans = 0, last = 0;
         while (remain > 0) {
             last = remain;
