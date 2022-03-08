@@ -21,6 +21,7 @@ public class BOJ_9470 {
         indeg = new int[n + 1];
         stra = new int[n + 1];
         graph = new ArrayList[n + 1];
+
         for (int i = 1; i <= n; i++) graph[i] = new ArrayList<>();
 
         while (m --> 0) {
