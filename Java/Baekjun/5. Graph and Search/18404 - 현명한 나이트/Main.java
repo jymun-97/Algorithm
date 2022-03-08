@@ -45,7 +45,6 @@ public class Main {
         for (int i = 0; i < targets.length; i++) {
             sb.append(dist[targets[i][0]][targets[i][1]]).append(' ');
         }
-
         System.out.println(sb);
     }
 
