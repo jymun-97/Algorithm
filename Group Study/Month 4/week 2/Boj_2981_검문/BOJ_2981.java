@@ -34,6 +34,7 @@ public class BOJ_2981 {
 
         Collections.sort(list);
         StringBuilder sb = new StringBuilder();
+
         for (int i : list) sb.append(i).append(' ');
         System.out.println(sb);
     }
