@@ -15,6 +15,7 @@ public class BOJ_3665 {
         n = Integer.parseInt(br.readLine());
         ranked = new int[n + 1];
         set = new HashSet[n + 1];
+
         for (int i = 1; i <= n; i++) set[i] = new HashSet<>();
 
         StringTokenizer st = new StringTokenizer(br.readLine());
