@@ -2,7 +2,6 @@ import java.io.*;
 import java.util.*;
 
 public class BOJ_9489 {
-
     public static int n, k;
     public static Node[] nodes;
 
