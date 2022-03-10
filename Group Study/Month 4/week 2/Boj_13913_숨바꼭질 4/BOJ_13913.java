@@ -10,6 +10,7 @@ public class BOJ_13913 {
     static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
+
         n = Integer.parseInt(st.nextToken());
         k = Integer.parseInt(st.nextToken());
     }
