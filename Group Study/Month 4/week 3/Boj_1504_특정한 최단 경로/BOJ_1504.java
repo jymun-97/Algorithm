@@ -1,23 +1,21 @@
 import java.util.*;
 import java.io.*;
 
-class Info {
-    int idx, dist;
-    public Info(int i, int d) {
-        idx = i;
-        dist = d;
-    }
-}
-class Edge {
-    int to, weight;
-    public Edge(int t, int w) {
-        to = t;
-        weight = w;
-    }
-}
-
 public class BOJ_1504 {
-
+    static class Info {
+        int idx, dist;
+        public Info(int i, int d) {
+            idx = i;
+            dist = d;
+        }
+    }
+    static class Edge {
+        int to, weight;
+        public Edge(int t, int w) {
+            to = t;
+            weight = w;
+        }
+    }
     static final int MAX = 200000000;
     static int n, m;
     static ArrayList<Edge>[] graph;
