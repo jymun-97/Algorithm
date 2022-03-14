@@ -18,7 +18,7 @@ public class BOJ_1644 {
         
         int answer = 0;
         int size = prime.size();
-        // two pointer로 시도하기
+
         for (int i = 0; i < size; i++) {
             int sum = 0;
 
