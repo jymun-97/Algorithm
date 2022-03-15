@@ -53,7 +53,6 @@ public class BOJ_8980 {
             answer += limit;
             load(info);
         }
-
         System.out.println(answer);
     }
 
