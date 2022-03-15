@@ -23,6 +23,7 @@ public class BOJ_3584 {
         }
 
         StringTokenizer st = new StringTokenizer(br.readLine());
+
         targets[0] = Integer.parseInt(st.nextToken());
         targets[1] = Integer.parseInt(st.nextToken());
     }
