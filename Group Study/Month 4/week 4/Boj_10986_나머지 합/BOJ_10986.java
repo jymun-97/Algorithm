@@ -33,7 +33,6 @@ public class BOJ_10986 {
         for (int i = 0; i < m; i++) {
             answer += (long) count[i] * (count[i] - 1) / 2;
         }
-
         System.out.println(answer);
     }
 
