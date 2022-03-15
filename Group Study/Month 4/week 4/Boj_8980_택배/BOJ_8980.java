@@ -1,23 +1,22 @@
 import java.util.*;
 import java.io.*;
 
-class Info implements Comparable<Info> {
-    int from, to, amount;
-
-    public Info(int from, int to, int amount) {
-        this.from = from;
-        this.to = to;
-        this.amount = amount;
-    }
-
-    @Override
-    public int compareTo(Info other) {
-        if (to == other.to) return from - other.from;
-        return to - other.to; 
-    }
-}
 public class BOJ_8980 {
+    static class Info implements Comparable<Info> {
+        int from, to, amount;
 
+        public Info(int from, int to, int amount) {
+            this.from = from;
+            this.to = to;
+            this.amount = amount;
+        }
+
+        @Override
+        public int compareTo(Info other) {
+            if (to == other.to) return from - other.from;
+            return to - other.to;
+        }
+    }
     static int n, max;
     static int[] amountAt;
     static ArrayList<Info> infos = new ArrayList<Info>();
