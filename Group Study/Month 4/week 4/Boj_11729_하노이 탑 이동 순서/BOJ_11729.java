@@ -27,6 +27,7 @@ public class BOJ_11729 {
         for (int i = 2; i <= n; i++) {
             move(i);
         }
+
         System.out.println(count() + "\n" + dp[n][1][3]);
     }
 
