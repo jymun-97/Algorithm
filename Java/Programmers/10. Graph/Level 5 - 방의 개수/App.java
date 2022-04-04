@@ -16,6 +16,7 @@ class Point {
         return Integer.toString(x).hashCode() + Integer.toString(y).hashCode();
     }
 }
+
 class Edge {
     Point p1, p2;
     public Edge(Point p1, Point p2) {
