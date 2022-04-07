@@ -10,7 +10,6 @@ fun input() = with(System.`in`.bufferedReader()) {
         n = nextToken().toInt()
         m = nextToken().toInt()
     }
-
     a = IntArray(n + 1)
     StringTokenizer(readLine()).apply {
         for (i in 1 .. n) a[i] = nextToken().toInt()
