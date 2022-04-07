@@ -4,7 +4,6 @@ import kotlin.math.max
 
 var n = 0
 var k = 0
-
 lateinit var graph: Array<ArrayList<Int>>
 lateinit var dp: Array<IntArray>
 lateinit var size: IntArray
