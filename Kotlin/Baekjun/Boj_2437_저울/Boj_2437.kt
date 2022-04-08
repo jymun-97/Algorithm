@@ -18,6 +18,7 @@ fun solve() {
             sum += it
         }
     }
+
     println(sum)
 }
 
