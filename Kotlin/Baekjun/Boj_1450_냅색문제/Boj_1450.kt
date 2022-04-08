@@ -3,6 +3,7 @@ import kotlin.collections.ArrayList
 
 var n = 0
 var c = 0
+
 lateinit var listA : List<Int>
 lateinit var listB : List<Int>
 lateinit var combi : ArrayList<Int>
