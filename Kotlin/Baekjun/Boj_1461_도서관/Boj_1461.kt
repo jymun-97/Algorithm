@@ -9,6 +9,7 @@ fun input() = with(System.`in`.bufferedReader()) {
         n = nextToken().toInt()
         m = nextToken().toInt()
     }
+
     loc.addAll(readLine().split(' ').map { it.toInt() }.sorted())
 }
 
