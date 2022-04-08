@@ -13,6 +13,7 @@ fun solve() {
 
         if (last == 'B') target = target.reversed()
     }
+
     println(
         if (str == target) 1
         else 0
