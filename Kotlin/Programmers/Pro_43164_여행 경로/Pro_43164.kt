@@ -9,6 +9,7 @@ class Solution {
     lateinit var count: HashMap<Ticket, Int>
     lateinit var graph: HashMap<String, TreeSet<String>>
     lateinit var answer: LinkedList<String>
+
     var n = 0
     var flag = false
 
