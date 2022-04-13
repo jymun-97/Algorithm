@@ -68,6 +68,7 @@ class Solution {
 
 fun main() {
     val s = Solution()
+
     val nodeinfo = arrayOf(
         intArrayOf(5,3),
         intArrayOf(11,5),
