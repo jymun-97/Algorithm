@@ -1,7 +1,6 @@
 class Solution {
     var n = 0
     lateinit var times: IntArray
-
     fun solution(n: Int, times: IntArray): Long {
         this.n = n
         this.times = times
