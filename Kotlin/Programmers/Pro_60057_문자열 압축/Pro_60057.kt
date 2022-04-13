@@ -9,6 +9,7 @@ class Solution {
             val tokens = StringBuilder(s).windowed(i, i)
             ans = min(ans, run(tokens) + n % i)
         }
+
         return ans
     }
 
