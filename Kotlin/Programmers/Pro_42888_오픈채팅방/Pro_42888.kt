@@ -3,7 +3,6 @@ import java.util.*
 class Solution {
 
     val map = hashMapOf<String, String>()
-
     fun solution(record: Array<String>): Array<String> {
         record.forEach {
             StringTokenizer(it).apply {
