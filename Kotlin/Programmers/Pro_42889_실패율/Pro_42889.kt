@@ -35,15 +35,12 @@ class Solution {
 
         val ans = IntArray(nStage)
         list.sortWith(compareByDescending { it.rate })
-<<<<<<< HEAD
             .forEachIndexed { index, info ->
                 ans[index] = info.id
             }
-=======
         list.forEachIndexed { index, info ->
             ans[index] = info.id
         }
->>>>>>> a27bc4d03a30b6f80a161ec2d24f06b91b2ac3c4
         return ans
     }
 }
