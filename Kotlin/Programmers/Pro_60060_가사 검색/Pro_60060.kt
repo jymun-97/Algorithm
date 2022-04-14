@@ -62,6 +62,7 @@ class Solution {
                 answer[i] = reverse_tries[n]!!.getCount(query)
             } else answer[i] = tries[n]!!.getCount(query)
         }
+
         return answer
     }
 }
