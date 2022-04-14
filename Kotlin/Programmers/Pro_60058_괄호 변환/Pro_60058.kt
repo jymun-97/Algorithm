@@ -28,6 +28,7 @@ class Solution {
             if (c == '(') ')'
             else '('
         ) }
+
         return copy
     }
 
