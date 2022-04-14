@@ -59,6 +59,7 @@ class Solution {
                 if (copy[i][j] != 1) return false
             }
         }
+
         return true
     }
 
