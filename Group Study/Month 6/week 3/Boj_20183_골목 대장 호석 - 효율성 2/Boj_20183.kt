@@ -10,6 +10,7 @@ data class Edge(
     val to: Int,
     val weight: Long
 )
+
 var n = 0
 var m = 0
 var start = 0
