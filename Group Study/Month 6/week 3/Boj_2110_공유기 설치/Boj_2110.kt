@@ -3,6 +3,7 @@ import java.util.*
 
 var n = 0
 var m = 0
+
 lateinit var arr: IntArray
 
 fun input() = with(System.`in`.bufferedReader()) {
