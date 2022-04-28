@@ -24,7 +24,6 @@ fun solve() {
         }
         else left = mid + 1
     }
-
     println(ans)
 }
 
