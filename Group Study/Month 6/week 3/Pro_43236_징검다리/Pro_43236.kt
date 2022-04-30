@@ -4,7 +4,6 @@ class Solution {
             plus(distance)
             sort()
         }
-
         var ans = 0
         var left = 0
         var right = distance
