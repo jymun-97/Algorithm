@@ -5,7 +5,6 @@ class Solution {
         val gcd = GCD(w, h)
         val nw = w / gcd
         val nh = h / gcd
-
         answer -= (nw + nh - 1) * gcd
 
         return answer
