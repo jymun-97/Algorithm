@@ -40,6 +40,7 @@ class Solution {
                 else stack.push(s[i])
             }
         }
+
         if (!visit.containsKey(s)) visit[s] = stack.isEmpty()
     }
 
