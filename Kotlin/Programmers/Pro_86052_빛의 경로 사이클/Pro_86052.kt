@@ -66,6 +66,7 @@ class Solution {
             que.add(info[1])
             que.add(info[2])
             que.add(cnt + 1)
+
             visit[info[2]][info[0]][info[1]]++
         }
 
