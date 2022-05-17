@@ -11,6 +11,7 @@ internal class Solution {
         seller: Array<String>,
         amount: IntArray
     ): IntArray {
+
         val n = enroll.size
         parentOf = IntArray(n)
         result = IntArray(n)
