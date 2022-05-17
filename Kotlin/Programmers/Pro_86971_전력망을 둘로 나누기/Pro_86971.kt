@@ -4,6 +4,7 @@ import kotlin.math.*
 class Solution {
     var n = 0
     var answer = 0
+
     lateinit var graph: Array<HashSet<Int>>
     lateinit var visit: BooleanArray
 
