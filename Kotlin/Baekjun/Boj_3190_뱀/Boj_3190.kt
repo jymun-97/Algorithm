@@ -1,20 +1,20 @@
 import java.util.*
-import kotlin.collections.HashSet
-
-const val EMPTY = 0
-const val SNAKE = 1
-const val APPLE = 2
+import kotlin.collections.ArrayList
 
 data class Point(
     val row: Int,
     val col: Int
 )
 
+const val DOWN = 0
+const val UP = 1
+const val RIGHT = 2
+const val LEFT = 3
+
 var n = 0
-lateinit var turn: LinkedList<Pair<Int, String>>
-lateinit var map: Array<IntArray>
-lateinit var head: Point
-lateinit var tail: Point
+val snake = LinkedList<Point>()
+val apples = hashSetOf<Point>()
+val commands = LinkedList<Pair<Int, String>>()
 
 val direction = arrayOf(
     arrayOf(1, 0),
@@ -24,50 +24,43 @@ val direction = arrayOf(
 )
 
 fun input() = with(System.`in`.bufferedReader()) {
-    turn = LinkedList()
-
     n = readLine().toInt()
-    map = Array(n + 1) { IntArray(n + 1) { EMPTY } }
 
     repeat(readLine().toInt()) {
         StringTokenizer(readLine()).apply {
-            map[nextToken().toInt()][nextToken().toInt()] = APPLE
+            apples.add(Point(nextToken().toInt(), nextToken().toInt()))
         }
     }
     repeat(readLine().toInt()) {
         StringTokenizer(readLine()).apply {
-            turn.add(Pair(nextToken().toInt(), nextToken()))
+            commands.add(Pair(nextToken().toInt(), nextToken()))
         }
     }
 }
 
 fun solve() {
-    map[1][1] = SNAKE
-    var time = 0
-    var dir = 2
-    head = Point(1, 1)
-    tail = Point(1, 1)
+    snake.add(Point(1, 1))
+    var time = 1
+    var dir = RIGHT
 
-    loop@
-    while (turn.isNotEmpty()) {
-        val command = turn.poll()
-
-        while (time <= command.first) {
-            val nr = head.row + direction[dir][0]
-            val nc = head.col + direction[dir][1]
-
-            if (!inRange(nr, nc) && map[nr][nc] == SNAKE) break@loop
-
-            when (map[nr][nc]) {
-                EMPTY -> {
-                    map[nr][nc] = SNAKE
-                    map[tail.row][tail.col] = EMPTY
-                }
-                APPLE -> {
-                    map[nr][nc] = SNAKE
-
-                }
+    run {
+        while (true) {
+            if (commands.isNotEmpty() && time > commands.peek().first) {
+                dir = turn(dir, commands.poll().second)
             }
+
+            val head = snake.first
+            val next = Point(
+                head.row + direction[dir][0],
+                head.col + direction[dir][1]
+            )
+
+            if (!inRange(next) || snake.contains(next)) return@run
+            snake.addFirst(next)
+
+            if (apples.contains(next)) apples.remove(next)
+            else snake.pollLast()
+
             time++
         }
     }
@@ -75,17 +68,18 @@ fun solve() {
     println(time)
 }
 
-fun updateTail() {
-    val row = tail.row
-    val col = tail.col
+fun turn(dir: Int, str: String) = when (dir) {
+    UP -> if (str == "L") LEFT else RIGHT
 
-    for (i in 0 until 4) {
-        val nr = row + dir[i][0]
-        val nc =
-    }
+    DOWN -> if (str == "L") RIGHT else LEFT
+
+    RIGHT -> if (str == "L") UP else DOWN
+
+    else -> if (str == "L") DOWN else UP
 }
 
-fun inRange(row: Int, col: Int) = row in 1 .. n && col in 1 .. n
+
+fun inRange(point: Point) = point.row in 1..n && point.col in 1..n
 
 fun main() {
     input()
