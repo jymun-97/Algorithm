@@ -6,7 +6,6 @@ data class Info(
     var start: Int,
     var end: Int
 )
-
 var n = 0
 var m = 0
 lateinit var list: ArrayList<Info>
