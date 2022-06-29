@@ -32,7 +32,6 @@ public class BOJ_1644 {
                 }
             }
         }
-
         System.out.println(answer);
     }
 
