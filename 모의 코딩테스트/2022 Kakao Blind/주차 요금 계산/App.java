@@ -3,6 +3,7 @@ import java.util.*;
 class Solution {
 
     public int[] solution(int[] fees, String[] records) {
+
         HashSet<String> set = new HashSet<>();
         HashMap<String, Integer> time = new HashMap<>();
         HashMap<String, String> inTime = new HashMap<>();
