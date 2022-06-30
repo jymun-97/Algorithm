@@ -1,7 +1,6 @@
 import java.io.*;
 
 public class Boj_1300 {
-
     static int n, k;
     static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
