@@ -16,6 +16,7 @@ public class Main {
         m = Integer.parseInt(st.nextToken());
         graph = new ArrayList[n + 1];
         fileOf = new HashSet[n + 1];
+
         for (int i = 0; i <= n; i++) {
             graph[i] = new ArrayList<>();
             fileOf[i] = new HashSet<>();
