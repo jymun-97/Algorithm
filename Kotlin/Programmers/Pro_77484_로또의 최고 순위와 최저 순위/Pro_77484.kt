@@ -13,6 +13,7 @@ internal class Solution {
         if (hit == 0) hit++
         val highest = if (count == 6) 1 else 7 - hit - count
         val lowest = 7 - hit
+
         return intArrayOf(highest, lowest)
     }
 }
