@@ -22,7 +22,6 @@ fun input() = with(System.`in`.bufferedReader()) {
 }
 
 fun solve() {
-
     for (i in 1 .. n) {
         if (people[i] == -1) {
             val response = bfs(i)
