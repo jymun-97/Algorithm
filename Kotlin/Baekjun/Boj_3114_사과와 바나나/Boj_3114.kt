@@ -1,2 +1,16 @@
-class Boj_3114 {
+import java.util.*
+
+
+
+fun input() = with(System.`in`.bufferedReader()) {
+
+}
+
+fun solve() {
+
+}
+
+fun main() {
+    input()
+    solve()
 }
