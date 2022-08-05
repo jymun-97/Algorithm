@@ -23,7 +23,6 @@
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/Boj_1201_NMK" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Test" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/Boj_1253_좋다_BinarySearch" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/Boj_3114_사과와 바나나" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
