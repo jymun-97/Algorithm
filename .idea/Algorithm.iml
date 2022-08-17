@@ -23,7 +23,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/Boj_1201_NMK" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Test" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/Boj_1253_좋다_BinarySearch" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Programmers/Pro_12928_약수의 합" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Programmers/Pro_12930_이상한 문자 만들기" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
