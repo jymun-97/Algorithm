@@ -1,43 +1,31 @@
 import java.util.*
-import kotlin.math.max
 
 data class Range(
     val start: Int,
-    val end: Int
+    val end: Int,
 )
+
 var n = 0
-val dp = IntArray(100001)
-val ranges = LinkedList<Range>()
+lateinit var ranges: List<Range>
 
 fun input() = with(System.`in`.bufferedReader()) {
     n = readLine().toInt()
-    repeat(n) {
+    ranges = List(n) {
         val (start, end) = readLine().split(" ").map { it.toInt() }
-        ranges.add(Range(start, end))
-    }
+        Range(start, end)
+    }.sortedWith(compareBy({ it.end }, { it.start }))
 }
 
 fun solve() {
-   for (i in ranges.first.end .. 100000) {
-       if (ranges.isEmpty()) {
-           println(dp[i - 1])
-           return
-       }
-       if (ranges.first.end > i) dp[i] = if (i > 0) dp[i - 1] else 0
-       else {
-           val range = ranges.poll()
-           if (i - range.start >= 0) {
-               dp[i] = max(
-                   dp[i - 1],
-                   dp[i - range.start] + 1
-               )
-           }
-           else dp[i] = if (i > 0) dp[i - 1] else 0
-       }
-       print("$i ")
-       println((0..i).map { dp[it] })
-   }
-   println(dp.last())
+    var ans = 1
+    var pre = ranges[0]
+    for (i in 1 until n) {
+        if (ranges[i].start < pre.end) continue
+
+        pre = ranges[i]
+        ans++
+    }
+    println(ans)
 }
 
 fun main() {
