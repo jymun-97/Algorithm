@@ -24,17 +24,18 @@ fun input() = with(br) {
 
 fun solve() {
     var ans = 0
-    val sorted = people.sortedBy { it.indeg }
+    val que = LinkedList<Person>()
+    que.addAll(people.filter { it.indeg == 0 })
 
-    run {
-        sorted.forEach {
-            if (it.indeg == 0) {
-                ans++
-                people[it.to - 1].indeg--
-            } else return@run
+    while (que.isNotEmpty()) {
+        val person = que.poll()
+        ans++
+
+        val target = people[person.to - 1]
+        if (--target.indeg == 0) {
+            que.add(target)
         }
     }
-    println(people)
 
     sb.append(ans).append('\n')
 }
