@@ -1,35 +1,29 @@
 import java.util.*
 import kotlin.collections.HashSet
 
-data class Number(
-    val value: Int,
-    val row: Int,
-    val col: Int
-) {
-    val group: Int
-        get() = row / 3 * 3 + col / 3
-}
-val nums = hashSetOf<Number>()
-val empty = hashSetOf<Number>()
+var isFinish = false
 lateinit var board: Array<IntArray>
+
+val numsInRow = Array<HashSet<Int>>(9) { hashSetOf() }
+val numsInCol = Array<HashSet<Int>>(9) { hashSetOf() }
+val numsInGroup = Array<HashSet<Int>>(9) { hashSetOf() }
 
 fun input() = with(System.`in`.bufferedReader()) {
     board = Array(9) { readLine().split(" ").map { it.toInt() }.toIntArray() }
-    for (row in 0 until 9) {
-        for (col in 0 until 9) {
-            if (board[row][col] == 0) empty.add(Number(board[row][col], row, col))
-            else nums.add(Number(board[row][col], row, col))
+    for (i in 0 until 9) {
+        for (j in 0 until 9) {
+            if (board[i][j] != 0) {
+                val value = board[i][j]
+                numsInRow[i].add(value)
+                numsInCol[j].add(value)
+                numsInGroup[getGroup(i, j)].add(value)
+            }
         }
     }
 }
 
 fun solve() {
-    while (empty.isNotEmpty()) {
-        val temp = HashSet(empty)
-        temp.forEach {
-            fill(it)
-        }
-    }
+    fill(0, 0)
     print()
 }
 
@@ -42,51 +36,49 @@ fun print() {
     }
 }
 
-fun fill(target: Number) {
-    checkRow(target.row)?.let {
-        addNumber(target, it)
-        return
-    }
-    checkCol(target.col)?.let {
-        addNumber(target, it)
-        return
-    }
-    checkGroup(target.group)?.let {
-        addNumber(target, it)
-    }
-}
+fun getGroup(row: Int, col: Int) = row / 3 * 3 + col / 3
 
-fun addNumber(target: Number, value: Int) {
-    empty.remove(target)
-    nums.add(Number(value, target.row, target.col))
-    board[target.row][target.col] = value
-}
+fun fill(row: Int, col: Int) {
+    when {
+        row >= 9 -> {
+            isFinish = true
+            return
+        }
+        col >= 9 -> {
+            fill(row + 1, 0)
+            return
+        }
+        board[row][col] != 0 -> {
+            fill(row, col + 1)
+            return
+        }
+    }
+    for (value in 1..9) {
+        val group = getGroup(row, col)
+        if (isValid(row, col, group, value)) {
+            addNumber(row, col, group, value)
+            fill(row, col + 1)
 
-fun checkRow(row: Int): Int? {
-    val filtered = nums.filter { it.row == row }.map { it.value }.toHashSet()
-    return if (filtered.size < 8) null else {
-        (1..9).find {
-            !filtered.contains(it)
+            if (!isFinish) removeNumber(row, col, group, value)
         }
     }
 }
 
-fun checkCol(col: Int): Int? {
-    val filtered = nums.filter { it.col == col }.map { it.value }.toHashSet()
-    return if (filtered.size < 8) null else {
-        (1..9).find {
-            !filtered.contains(it)
-        }
-    }
+fun isValid(row: Int, col: Int, group: Int, value: Int): Boolean =
+    !numsInRow[row].contains(value) && !numsInCol[col].contains(value) && !numsInGroup[group].contains(value)
+
+fun addNumber(row: Int, col: Int, group: Int, value: Int) {
+    board[row][col] = value
+    numsInRow[row].add(value)
+    numsInCol[col].add(value)
+    numsInGroup[group].add(value)
 }
 
-fun checkGroup(group: Int): Int? {
-    val filtered = nums.filter { it.group == group }.map { it.value }.toHashSet()
-    return if (filtered.size < 8) null else {
-        (1..9).find {
-            !filtered.contains(it)
-        }
-    }
+fun removeNumber(row: Int, col: Int, group: Int, value: Int) {
+    board[row][col] = 0
+    numsInRow[row].remove(value)
+    numsInCol[col].remove(value)
+    numsInGroup[group].remove(value)
 }
 
 fun main() {
