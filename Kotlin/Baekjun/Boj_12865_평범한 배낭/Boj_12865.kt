@@ -3,39 +3,39 @@ import kotlin.math.max
 
 var n = 0
 var k = 0
-var ans = 0
+lateinit var dp: Array<IntArray>
 lateinit var weights: IntArray
 lateinit var values: IntArray
-lateinit var dp: Array<IntArray>
 
 fun input() = with(System.`in`.bufferedReader()) {
-    StringTokenizer(readLine()).apply {
-        n = nextToken().toInt()
-        k = nextToken().toInt()
-    }
-    weights = IntArray(n)
-    values = IntArray(n)
-    repeat(4) {
+    val tokens = readLine().split(" ").map { it.toInt() }
+    n = tokens[0]
+    k = tokens[1]
+
+    dp = Array(n + 1) { IntArray(k + 1) }
+    weights = IntArray(n + 1)
+    values = IntArray(n + 1)
+
+    repeat(n) {
         val (weight, value) = readLine().split(" ").map { it.toInt() }
-        weights[it] = weight
-        values[it] = value
+        weights[it + 1] = weight
+        values[it + 1] = value
     }
-    dp = Array(n) { IntArray(k + 1) { -1 } }
 }
 
 fun solve() {
-    println(knapsack(n - 1, k))
-}
+    dp[1].fill(values[1], weights[1])
 
-fun knapsack(i: Int, weight: Int): Int {
-    if (weight <= 0 || i < 0) return 0
-    if (dp[i][weight] != -1) return dp[i][weight]
+    for (i in 2..n) {
+        for (j in 0..k) {
+            dp[i][j] = if (j >= weights[i]) max(
+                dp[i - 1][j - weights[i]] + values[i],
+                dp[i - 1][j]
+            ) else dp[i - 1][j]
+        }
+    }
 
-    dp[i][weight] = if (weights[i] <= weight) max(
-        knapsack(i - 1, weight - weights[i]) + values[i],
-        knapsack(i - 1, weight)
-    ) else knapsack(i - 1, weight)
-    return dp[i][weight]
+    println(dp[n][k])
 }
 
 fun main() {
