@@ -8,7 +8,7 @@ var ans = Double.MAX_VALUE
 
 data class Point(
     val x: Int,
-    val y: Int,
+    val y: Int
 )
 
 var n = 0
