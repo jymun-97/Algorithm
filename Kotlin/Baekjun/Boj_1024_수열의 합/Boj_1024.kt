@@ -12,28 +12,21 @@ fun input() = with(System.`in`.bufferedReader()) {
 
 fun solve() {
     for (length in l..100) {
-        var left = 0
-        var right = left + length - 1
+        val temp = n - (length * (length + 1) / 2)
+        if (temp % length == 0) {
+            val x = temp / length + 1
 
-        while (left <= 10000) {
-            val sum =  (rightgit  * right + right - left * left - left) / 2
-            when {
-                sum == n -> {
-                    println(
-                        (left..right).joinToString(" ")
-                    )
-                    return
+            if (x >= 0) {
+                val builder = StringBuilder()
+                for (i in 0 until length) {
+                    builder.append(x + i).append(' ')
                 }
-
-                sum > n -> break
-
-                else -> {
-                    left++
-                    right++
-                }
+                println(builder)
+                return
             }
         }
     }
+    println(-1)
 }
 
 fun main() {
