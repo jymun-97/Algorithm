@@ -24,7 +24,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Test" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/Boj_1253_좋다_BinarySearch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Programmers/Pro_12946_하노이의 탑" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/Boj_1024_수열의 합" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/Boj_2468_안전 영역" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
