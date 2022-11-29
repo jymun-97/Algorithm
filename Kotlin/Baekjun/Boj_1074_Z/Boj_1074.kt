@@ -19,6 +19,7 @@ fun input() = with(System.`in`.bufferedReader()) {
 fun init() {
     dp[0] = 1
     pow[0] = 1
+
     for (i in 1..n) {
         dp[i] = dp[i - 1] * 4
         pow[i] = pow[i - 1] * 2
