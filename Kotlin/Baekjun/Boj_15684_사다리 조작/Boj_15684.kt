@@ -1,61 +1,76 @@
-import java.util.*
+import kotlin.collections.HashSet
 
 var n = 0
 var m = 0
-var h = 0
-val isValid = booleanArrayOf(false, false, false, false)
-lateinit var graph: Array<IntArray>
+var k = 0
+var min = 4
+lateinit var graph: Array<HashSet<Pair<Int, Int>>>
 
 fun input() = with(System.`in`.bufferedReader()) {
-    StringTokenizer(readLine()).apply {
-        n = nextToken().toInt()
-        m = nextToken().toInt()
-        h = nextToken().toInt()
+    readLine().split(" ").map { it.toInt() }.apply {
+        n = this[2]
+        m = this[0]
+        k = this[1]
     }
-    graph = Array(h + 1) { IntArray(n + 1) }
-    repeat(m) {
-        val (a, b) = readLine().split(" ").map { it.toInt() }
-        graph[a][b] = b + 1
-        graph[a][b + 1] = b
+    graph = Array(n + 1) { hashSetOf() }
+
+    repeat(k) {
+        val (row, col) = readLine().split(" ").map { it.toInt() }
+        link(row, col)
     }
 }
 
 fun solve() {
-    dfs(0, 1, 0, true)
-    println(isValid.indexOfFirst { it })
+    dfs(1, 1, 0, true)
+    println(
+        if (min == 4) -1
+        else min
+    )
 }
 
-fun move(row: Int, col: Int, flag: Boolean): Int = when {
-    row > h -> col
-
-    graph[row][col] == 0 || flag -> move(row + 1, col, false)
-
-    else -> move(row, graph[row][col], true)
+fun link(row: Int, col: Int) = graph[row].apply {
+    add(col to col + 1)
+    add(col + 1 to col)
 }
 
-fun check(): Boolean = (1..n).all { move(0, it, false) == it }
+fun unlink(row: Int, col: Int) = graph[row].apply {
+    remove(col to col + 1)
+    remove(col + 1 to col)
+}
 
-fun dfs(k: Int, preRow: Int, preCol: Int, flag: Boolean) {
-    if (k == 4) return
-    if (flag && !isValid[k]) isValid[k] = check()
-    if (isValid[k]) return
+fun goDown(row: Int, col: Int, flag: Boolean): Int = when {
+    row > n -> col
 
-    for (row in preRow..h) {
-        for (col in (if (row == preRow) preCol + 1 else 1) until n) {
-            if (graph[row][col] != 0 || graph[row][col + 1] != 0) continue
+    !flag && isLinked(row, col, -1) -> goDown(row, col - 1, true)
 
-            graph[row][col] = col + 1
-            graph[row][col + 1] = col
+    !flag && isLinked(row, col, 1) -> goDown(row, col + 1, true)
 
-            dfs(k + 1, row, col, true)
+    else -> goDown(row + 1, col, false)
+}
 
-            graph[row][col] = 0
-            graph[row][col + 1] = 0
+fun isLinked(row: Int, col: Int) = graph[row].contains(col to col - 1) || graph[row].contains(col to col + 1)
+fun isLinked(row: Int, col: Int, dir: Int) = graph[row].contains(col to col + dir)
 
-            dfs(k, row, col, false)
+fun dfs(row: Int, col: Int, count: Int, flag: Boolean) {
+    when {
+        row > n || count >= min -> return
+
+        flag && isFinish() -> min = count
+
+        col > m -> dfs(row + 1, 1, count, false)
+
+        !isLinked(row, col) && !isLinked(row, col + 1) -> {
+            dfs(row, col + 1, count, false)
+            link(row, col)
+            dfs(row, col + 1, count + 1, true)
+            unlink(row, col)
         }
+
+        else -> dfs(row, col + 1, count, false)
     }
 }
+
+fun isFinish() = (1..m).all { it == goDown(1, it, false) }
 
 fun main() {
     input()
