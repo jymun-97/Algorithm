@@ -4,50 +4,58 @@ val reader = System.`in`.bufferedReader()
 val builder = StringBuilder()
 
 const val MOD = 10000
-const val COMMANDS = "DSLR"
+const val COMMAND = "DSLR"
 
-data class Number(
-    val value: Int
-) {
-    val str = value.toString().padStart(4, '0')
+var num = 0
+var target = 0
+lateinit var parentOf: IntArray
+lateinit var route: CharArray
 
-    fun D() = Number(if (value * 2 >= MOD) value * 2 % MOD else value * 2)
-
-    fun S() = Number(if (value == 0) MOD - 1 else value - 1)
-
-    fun L() = Number("${str.substring(1)}${str[0]}".toInt())
-
-    fun R() = Number("${str.last()}${str.substring(0, str.lastIndex)}".toInt())
-}
-
-lateinit var start: Number
-lateinit var end: Number
+fun Int.D() = if (this * 2 >= MOD) this * 2 % MOD else this * 2
+fun Int.S() = if (this - 1 < 0) MOD - 1 else this - 1
+fun Int.L() = this % 1000 * 10 + this / 1000
+fun Int.R() = this % 10 * 1000 + this / 10
 
 fun input() = with(reader) {
-    readLine().split(" ").map { it.toInt() }.let {
-        start = Number(it[0])
-        end = Number(it[1])
+    readLine().split(" ").map { it.toInt() }.apply {
+        num = this[0]
+        target = this[1]
     }
+    parentOf = IntArray(MOD) { -1 }
+    route = CharArray(MOD)
 }
 
 fun solve() {
-    val map = hashMapOf<Number, String>()
-    val que = LinkedList<Number>().apply {
-        add(start)
-        map[start] = ""
+    val que = LinkedList<Int>().apply {
+        add(num)
+        parentOf[num] = num
     }
     while (que.isNotEmpty()) {
-        val num = que.poll()
-        if (num == end) break
+        with(que.poll()) {
+            if (this == target) {
+                builder.append(getRouteString()).append('\n')
+                return
+            }
+            listOf(D(), S(), L(), R()).forEachIndexed { i, it ->
+                if (parentOf[it] != -1) return@forEachIndexed
 
-        listOf(num.D(), num.S(), num.L(), num.R()).forEachIndexed { i, cand ->
-            map[cand] = map[cand]?.let {
-                return@forEachIndexed
-            } ?: "${map[num]}${COMMANDS[i]}"
-            que.add(cand)
+                que.add(it)
+                parentOf[it] = this
+                route[it] = COMMAND[i]
+            }
         }
     }
-    builder.append(map[end]).append('\n')
+}
+
+fun getRouteString(): String {
+    val que = LinkedList<Char>()
+    var from = target
+
+    while (from != num) {
+        que.addFirst(route[from])
+        from = parentOf[from]
+    }
+    return que.joinToString("")
 }
 
 fun main() = with(reader) {
