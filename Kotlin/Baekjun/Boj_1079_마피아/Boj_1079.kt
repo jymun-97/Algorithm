@@ -1,65 +1,55 @@
-import java.util.*
 import kotlin.math.max
-
-data class User(
-    val id: Int,
-    var crime: Int,
-) : Comparable<User> {
-
-    override fun compareTo(other: User): Int {
-        return if (crime != other.crime) other.crime - crime
-        else id - other.id
-    }
-}
 
 var n = 0
 var mafia = 0
 var ans = 0
-val users = LinkedList<User>()
-lateinit var arr: Array<IntArray>
+lateinit var scores: IntArray
+lateinit var isDead: BooleanArray
+lateinit var amount: Array<IntArray>
 
 fun input() = with(System.`in`.bufferedReader()) {
     n = readLine().toInt()
-    val crimes = readLine().split(" ").map { it.toInt() }
-    arr = Array(n) { readLine().split(" ").map { it.toInt() }.toIntArray() }
-
+    scores = readLine().split(" ").map { it.toInt() }.toIntArray()
+    isDead = BooleanArray(n)
+    amount = Array(n) { readLine().split(" ").map { it.toInt() }.toIntArray() }
     mafia = readLine().toInt()
-    repeat(n) {
-        users.add(
-            User(it, crimes[it])
-        )
-    }
 }
 
 fun solve() {
-    dfs(0)
+    dfs(0, n)
     println(ans)
 }
 
-fun dfs(count: Int) {
-    users.sort()
-    ans = max(ans, count)
+fun dfs(count: Int, remain: Int): Unit = when {
+    isDead[mafia] || remain <= 1 -> ans = max(ans, count)
 
-    if (users.size % 2 == 1) {
-        if (users.peek().id == mafia) return
-        val target = users.poll()
-        dfs(count)
-        users.add(target)
+    remain % 2 == 1 -> findTarget().let { target ->
+        isDead[target] = true
+        dfs(count, remain - 1)
+        isDead[target] = false
     }
-    else {
-        (0 until n).forEach { id ->
-            if (id == mafia) return@forEach
 
-            val target = users.find { it.id == id } ?: return@forEach
-            users.apply {
-                remove(target)
-                forEach { it.crime += arr[target.id][it.id] }
-                dfs(count + 1)
-                forEach { it.crime -= arr[target.id][it.id] }
-                add(target)
-            }
+    else -> (0 until n).forEach { target ->
+        if (target == mafia || isDead[target]) return@forEach
+
+        isDead[target] = true
+        (0 until n).forEach { scores[it] += amount[target][it] }
+        dfs(count + 1, remain - 1)
+        (0 until n).forEach { scores[it] -= amount[target][it] }
+        isDead[target] = false
+    }
+}
+
+fun findTarget(): Int {
+    var maxScore = 0
+    var target = -1
+    scores.forEachIndexed { id, score ->
+        if (maxScore < score && !isDead[id]) {
+            maxScore = score
+            target = id
         }
     }
+    return target
 }
 
 fun main() {
