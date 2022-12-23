@@ -1,13 +1,14 @@
+import java.util.PriorityQueue
+
 data class Jewelry(
-    val weight: Int,
     val value: Int,
+    val weight: Int,
 )
 
 var n = 0
 var k = 0
-lateinit var jewelries: List<Jewelry>
 lateinit var bags: List<Int>
-val count = hashMapOf<Int, Int>()
+lateinit var jewelries: List<Jewelry>
 
 fun input() = with(System.`in`.bufferedReader()) {
     readLine().split(" ").map { it.toInt() }.apply {
@@ -16,61 +17,29 @@ fun input() = with(System.`in`.bufferedReader()) {
     }
     jewelries = List(n) {
         val (weight, value) = readLine().split(" ").map { it.toInt() }
-        Jewelry(weight, value)
-    }.sortedBy { -it.value }
+        Jewelry(value, weight)
+    }.sortedBy { it.weight }
 
-    bags = hashSetOf<Int>().apply {
-        addAll(List(k) { readLine().toInt() })
-    }.sorted().also {
-        k = it.size
-        it.forEach { weight ->
-            count[weight] = (count[weight] ?: 0) + 1
-        }
-    }
+    bags = (0 until k).map { readLine().toInt() }.sorted()
 }
 
 fun solve() {
-    var sum = 0
-    jewelries.forEach { jewelry ->
-        if (bags.isEmpty()) return@forEach
+    val que = PriorityQueue<Jewelry>() { j1, j2 -> j2.value - j1.value }
+    var index = 0
+    var sum = 0L
 
-        binarySearch(jewelry.weight)?.let {
-            sum += jewelry.value
-
-            count[it] = count[it]!! - 1
-            if (count[it]!! == 0) count.remove(it)
+    bags.forEach { bag ->
+        while (index < n && bag >= jewelries[index].weight) {
+            que.add(jewelries[index++])
         }
+        if (que.isEmpty()) return@forEach
+        sum += que.poll().value
     }
+
     println(sum)
-}
-
-fun binarySearch(weight: Int): Int? {
-    var l = 0
-    var r = k - 1
-    var target: Int? = null
-
-    while (l <= r) {
-        val mid = (l + r) / 2
-        when {
-            bags[mid] == weight && count[bags[mid]] != null -> return bags[mid]
-
-            bags[mid] > weight -> {
-                r = mid - 1
-                count[bags[mid]]?.let {
-                    target = bags[mid]
-                }
-            }
-
-            else -> l = mid + 1
-        }
-    }
-    return target
 }
 
 fun main() {
     input()
     solve()
-
-    val test = mutableListOf<Int>()
-    test.remove(0)
 }
