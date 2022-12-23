@@ -1,57 +1,44 @@
-import java.util.*
-
+import java.util.TreeMap
 
 val reader = System.`in`.bufferedReader()
 val builder = StringBuilder()
 
-var k = 0
-var flag = false
-val commands = mutableListOf<Pair<String, Int>>()
-lateinit var que: LinkedList<Int>
+lateinit var commands: List<Pair<Char, Int>>
+lateinit var map: TreeMap<Int, Int>
 
 fun input() = with(reader) {
-    k = readLine().toInt()
-    flag = false
-    que = LinkedList<Int>()
-
-    repeat(k) {
-        val tokens = readLine().split(" ")
-        commands.add(
-            tokens[0] to tokens[1].toInt()
-        )
+    commands = List(readLine().toInt()) {
+        val (command, value) = readLine().split(" ")
+        command[0] to value.toInt()
     }
+    map = TreeMap()
 }
 
 fun solve() {
     commands.forEach {
         val (command, value) = it
-
         when (command) {
-            "I" -> insert(value)
-
-            "D" -> delete(value != 1)
+            'I' -> insert(value)
+            'D' -> remove(value == 1)
         }
     }
-    if (que.isEmpty()) builder.appendLine("EMPTY")
-    else {
-        que.sort()
-        builder.append(que.last).append(' ').appendLine(que.first)
+    builder.apply {
+        if (map.isEmpty()) appendLine("EMPTY")
+        else append(map.lastKey()).append(' ').appendLine(map.firstKey())
     }
 }
 
 fun insert(value: Int) {
-    if (que.isNotEmpty() && value < que.peekLast()) flag = true
-    que.add(value)
+    map[value] = (map[value] ?: 0) + 1
 }
 
-fun delete(isTargetMin: Boolean) {
-    if (que.isEmpty()) return
+fun remove(isTargetMax: Boolean) {
+    if (map.isEmpty()) return
 
-    if (flag) {
-        que.sort()
-        flag = false
-    }
-    if (isTargetMin) que.poll() else que.pollLast()
+    val (target, count) = if (isTargetMax) map.lastEntry() else map.firstEntry()
+
+    if (count > 1) map[target] = map[target]!! - 1
+    else map.remove(target)
 }
 
 fun main() = with(reader) {
