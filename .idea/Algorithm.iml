@@ -24,6 +24,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Test" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/Boj_1253_좋다_BinarySearch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Programmers/Pro_12946_하노이의 탑" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/1000 - 1999/Boj_1918_후위 표기식" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/11000 - 11999/Boj_11000_강의실 배정" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/13000 - 13999/Boj_13023_ABCDE" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/14000 - 14999/Boj_14503_로봇 청소기" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/2000 - 2999/Boj_2580_스도쿠" />
     </content>
     <orderEntry type="inheritedJdk" />
