@@ -25,7 +25,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/Boj_1253_좋다_BinarySearch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Programmers/Pro_12946_하노이의 탑" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/2000 - 2999/Boj_2098_외판원 순회" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Programmers/Pro_131703_2차원 동전 뒤집기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Programmers/Pro_118667_두 큐 합 같게 만들기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Programmers/Pro_131127_할인 행사" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Programmers/Pro_70130_스타 수열" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Programmers/Pro_76503_모두 0으로 만들기" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
