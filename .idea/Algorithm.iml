@@ -28,7 +28,6 @@
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/1000 - 1999/Boj_1976_여행 가자" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/2000 - 2999/Boj_2565_전깃줄" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/2000 - 2999/Boj_2638_치즈" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/2000 - 2999/Boj_2665_미로만들기" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
