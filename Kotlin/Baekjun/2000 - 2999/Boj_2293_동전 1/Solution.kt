@@ -13,18 +13,14 @@ fun input() = with(System.`in`.bufferedReader()) {
 }
 
 fun solve() {
-    make(0, 0)
-    println(dp.contentToString())
-    println(dp[k])
-}
-
-fun make(i: Int, sum: Int) {
-    if (i == n || sum > k) return
-
-    dp[sum]++
-    for (j in i until n) {
-        make(j, sum + coins[j])
+    dp[0] = 1
+    coins.forEach { coin ->
+        for (target in coin..k) {
+            dp[target] += dp[target - coin]
+        }
     }
+
+    println(dp[k])
 }
 
 fun main() {
