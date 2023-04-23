@@ -30,7 +30,6 @@
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/1000 - 1999/Boj_1647_도시 분할 계획" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/1000 - 1999/Boj_1865_웜홀" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/2000 - 2999/Boj_2170_선 긋기" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/2000 - 2999/Boj_2253_점프" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/5000 - 5999/Boj_5052_전화번호 목록" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
