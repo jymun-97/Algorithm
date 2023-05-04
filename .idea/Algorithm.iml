@@ -29,9 +29,9 @@
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/21000 - 21999/Boj_21757_나누기" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/5000 - 5999/Boj_5052_전화번호 목록" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/1000 - 1999/Boj_1103_게임" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/2000 - 2999/Boj_2146_다리 만들기" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/25000 - 25999/Boj_25378_조약돌" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/28000 - 28999/Boj_28016_경춤 추천" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Kotlin/Baekjun/28000 - 28999/Boj_28018_시간이 겹칠까" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
